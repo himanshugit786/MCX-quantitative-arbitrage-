@@ -11,6 +11,7 @@ interface HeaderProps {
   onOpenRebalance: () => void;
   onOpenSizer: () => void;
   onOpenAudit: () => void;
+  onOpenReport: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -23,6 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenRebalance,
   onOpenSizer,
   onOpenAudit,
+  onOpenReport,
 }) => {
   const [currentTime, setCurrentTime] = useState<string>('IST 14:32:08');
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
@@ -146,11 +148,19 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={onOpenAudit}
-              className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[11px] font-medium flex items-center gap-1 transition-colors"
+              className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[11px] font-medium flex items-center gap-1 transition-colors cursor-pointer"
               title="Export Audit PDF"
             >
               <span className="material-symbols-outlined text-[14px]">sim_card_download</span>
               <span>Audit PDF</span>
+            </button>
+            <button
+              onClick={onOpenReport}
+              className="px-2.5 py-1 bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-900 rounded text-[11px] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
+              title="Project Model & Architecture Report"
+            >
+              <span className="material-symbols-outlined text-[14px] text-amber-700">description</span>
+              <span>Report</span>
             </button>
           </div>
 

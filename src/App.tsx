@@ -19,6 +19,7 @@ import { RebalanceModal } from './components/Modals/RebalanceModal';
 import { PositionSizerModal } from './components/Modals/PositionSizerModal';
 import { AuditReportModal } from './components/Modals/AuditReportModal';
 import { DeskSettingsModal } from './components/Modals/DeskSettingsModal';
+import { ProjectReportModal } from './components/Modals/ProjectReportModal';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<NavigationTab>('curves');
@@ -34,6 +35,7 @@ export default function App() {
   const [isPositionSizerOpen, setIsPositionSizerOpen] = useState<boolean>(false);
   const [isAuditReportOpen, setIsAuditReportOpen] = useState<boolean>(false);
   const [isDeskSettingsOpen, setIsDeskSettingsOpen] = useState<boolean>(false);
+  const [isReportOpen, setIsReportOpen] = useState<boolean>(false);
 
   // Notification Toast
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -99,6 +101,7 @@ export default function App() {
         onOpenRebalance={() => setIsRebalanceOpen(true)}
         onOpenSizer={() => setIsPositionSizerOpen(true)}
         onOpenAudit={() => setIsAuditReportOpen(true)}
+        onOpenReport={() => setIsReportOpen(true)}
       />
 
       {/* Main Full-Screen Body */}
@@ -212,6 +215,11 @@ export default function App() {
         onClose={() => setIsDeskSettingsOpen(false)}
         isMockTickActive={isMockTickActive}
         onToggleMockTick={() => setIsMockTickActive(!isMockTickActive)}
+      />
+
+      <ProjectReportModal
+        isOpen={isReportOpen}
+        onClose={() => setIsReportOpen(false)}
       />
     </div>
   );
