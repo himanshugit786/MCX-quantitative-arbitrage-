@@ -1,0 +1,6 @@
+{
+  "name": "MCX Quantitative Arbitrage Terminal",
+  "description": "Institutional algorithmic arbitrage terminal for MCX Gold futures and normalized basis curves.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
