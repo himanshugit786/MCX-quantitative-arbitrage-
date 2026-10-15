@@ -1,0 +1,1 @@
+MCX pe gold ke 4 futures contracts hain: GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL. Sab ka underlying same hai (gold), bas size aur quotation alag hai. Isliye normalize karne ke baad inke prices lagbhag same hone chahiye.
