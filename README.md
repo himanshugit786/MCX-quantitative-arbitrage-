@@ -1,5 +1,6 @@
 Readme:
-*MCX Gold Normalization - Logic*
+*MCX Gold Normalization - Logic 
+now this is live : https://eloquent-gecko-71aa56.netlify.app
 
 Sabka underlying same hai (999 Gold), bas quotation alag hai.
 Symbol	Unit	Quoted In	Normalize to 10g
